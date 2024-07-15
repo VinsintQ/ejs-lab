@@ -1,0 +1,34 @@
+<%- include('./partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=category.category %></title>
+  </head>
+  <body>
+    <h1><%=category.category %></h1>
+
+    <% array.forEach((elem)=>{ %>
+    <table>
+      <tr>
+        <th>name</th>
+        <td><%= elem.name %></td>
+      </tr>
+      <tr>
+        <th>price</th>
+        <td><%= elem.price %>$</td>
+      </tr>
+      <tr>
+        <th>rating</th>
+        <td><%= elem.rating %></td>
+      </tr>
+      <tr>
+        <th>details</th>
+        <td><%= elem.details %></td>
+      </tr>
+    </table>
+
+    <% }) %>
+  </body>
+</html>
